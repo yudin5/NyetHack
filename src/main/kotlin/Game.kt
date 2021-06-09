@@ -42,6 +42,6 @@ fun main() {
         "human" -> "Free People of the Rolling Hills"
         else -> "Strange people..."
     }
-
+    println("Race: $race. Faction: $faction")
 
 }
