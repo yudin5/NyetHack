@@ -34,6 +34,10 @@ fun main() {
     "(Blessed: ${if (isBlessed) "YES" else "NO"})")
     println("$name $healthStatus")
 
+    // val statusFormatString = "(HP)(A) -> H"
+    val statusFormatString = "(HP: $healthPoints)(Aura: $auraColor) -> $healthStatus"
+    println("statusFormatString = $statusFormatString")
+
     val race = "gnome"
     val faction = when (race) {
         "dwarf" -> "Keepers of the Mines"
