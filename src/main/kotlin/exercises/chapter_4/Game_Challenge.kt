@@ -23,6 +23,9 @@ fun main() {
     castFireball(5)
     castFireball()
 
+    // Вот такие странные функции можно создавать и вызывать
+    `**~prolly not a good idea!~**`()
+
     // Кидает исключение
     shouldReturnAString()
 
@@ -41,15 +44,8 @@ private fun printPlayerStatus(
     println("$name $healthStatus")
 }
 
-private fun getAuraColor(
-    isBlessed: Boolean,
-    healthPoints: Int,
-    isImmortal: Boolean
-): String {
-    val auraVisible = (isBlessed && healthPoints > 50) || isImmortal
-    val auraColor = if (auraVisible) "GREEN" else "NONE"
-    return auraColor
-}
+private fun getAuraColor(isBlessed: Boolean, healthPoints: Int, isImmortal: Boolean) =
+    if ((isBlessed && healthPoints > 50) || isImmortal) "GREEN" else "NONE"
 
 private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
     when (healthPoints) {
@@ -69,4 +65,8 @@ private fun castFireball(numFireballs: Int = 2) =
 private fun shouldReturnAString(): String {
     TODO("should return a string")
     println("unreachable")
+}
+
+fun `**~prolly not a good idea!~**`() {
+    println("Miss me?")
 }
