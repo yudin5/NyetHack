@@ -1,3 +1,5 @@
+package exercises.chapter_4
+
 fun main() {
     val name = "Madrigal"
     val healthPoints = 88
@@ -18,15 +20,11 @@ fun main() {
         healthStatus = healthStatus
     )
 
-    printPlayerStatus(
-        healthStatus = healthStatus,
-        name = "Estragon",
-        isBlessed = false,
-        auraColor = "RED"
-    )
-
     castFireball(5)
     castFireball()
+
+    // Кидает исключение
+    shouldReturnAString()
 
 }
 
@@ -67,3 +65,8 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean) =
 
 private fun castFireball(numFireballs: Int = 2) =
     println("A glass of Fireball springs into existence. (x$numFireballs)")
+
+private fun shouldReturnAString(): String {
+    TODO("should return a string")
+    println("unreachable")
+}
